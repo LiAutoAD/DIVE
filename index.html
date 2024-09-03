@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DiVE: DiT-based Video Generation with Enhanced Control</title>
+  <link rel="icon" type="image/x-icon" href="static/images/dive-b.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">DiVE: DiT-based Video Generation with Enhanced Control</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Junpeng Jiang</a><sup>1,2*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Gangyi Hong</a><sup>3,2*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lijun Zhou</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Enhui Ma</a><sup>4,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hengtong Hu</a><sup>2</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xia Zhou</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jie Xiang</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Fan Liu</a><sup>5</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Kaicheng Yu</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Haiyang Sun</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Kun Zhan</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Peng Jia</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Miao Zhang</a><sup>1†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Harbin Institute of Technology (Shenzhen),</span>
+              <span class="author-block"><sup>2</sup>Li Auto Inc.,</span>
+              <span class="author-block"><sup>3</sup>Tsinghua University,</span>
+              <span class="author-block"><sup>4</sup>Westlake University,</span>
+              <span class="author-block"><sup>5</sup>National University of Singapore</span>
+              <span class="eql-cntrb"><small><br>(<sup>*</sup>Co-first authors. <sup>†</sup>Corresponding
+                  Author)</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          DiVE won <b>first place</b> in the <a href="https://coda-dataset.github.io/w-coda2024/track2/">Corner Case
+            Scene Generation</a> track of the Multimodal Perception and Comprehension of Corner Cases in Autonomous
+          Driving challenge.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4" type="video/mp4"> -->
+        <!-- </video> -->
+        <img src="static/images/archi2.jpg" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          The structural implementation with each individual components in our proposed method.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Generating high-fidelity, temporally consistent videos in autonomous driving scenarios faces a significant
+              challenge,
+              <i>e.g.</i> problematic maneuvers in corner cases. Despite recent video generation works are proposed to
+              tackcle the mentioned problem,
+              <i>i.e.</i> models built on top of Diffusion Transformers (DiT), works are still missing which are
+              targeted on exploring the potential for
+              multi-view videos generation scenarios.
+              Noticeably, we propose the first DiT-based framework specifically designed for generating temporally and
+              multi-view consistent videos which
+              precisely match the given bird's-eye view layouts control.
+              Specifically, the proposed framework leverages a parameter-free spatial view-inflated attention mechanism
+              to guarantee the cross-view consistency,
+              where joint cross-attention modules and ControlNet-Transformer are integrated to further improve the
+              precision of control.
+              To demonstrate our advantages, we extensively investigate the qualitative comparisons on nuScenes dataset,
+              particularly in some most challenging corner cases.
+              In summary, the effectiveness of our proposed method in producing long, controllable, and highly
+              consistent videos under difficult
+              conditions is proven to be effective.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Youtube video -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- Paper video. -->
+        <h2 class="title is-3">Long video generation on nuScenes dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            Long videos generated by DiVE (up to 240 frames at 12 Hz) on the nuScenes dataset.
+          </p>
+        </div>
+
+        <h2 class="title is-4">Sunny Day</h2>
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/dive/sunny/80c91574d0174206a74435200aba8ba8.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/dive/sunny/604d12ebcf784c3f945189f79262f19c.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/dive/sunny/23779301ebc34c1284e539ddf057f0b4.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <h2 class="title is-4">Rainy Day</h2>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/dive/rainy/80c91574d0174206a74435200aba8ba8.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/dive/rainy/604d12ebcf784c3f945189f79262f19c.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/dive/rainy/23779301ebc34c1284e539ddf057f0b4.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <h2 class="title is-4">At Night</h2>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/dive/night/80c91574d0174206a74435200aba8ba8.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/dive/night/604d12ebcf784c3f945189f79262f19c.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/dive/night/23779301ebc34c1284e539ddf057f0b4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End youtube video -->
+
+  <!-- Paper poster -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Quality of Controllable Generation</h2>
+        <div class="columns is-centered">
+          <img src="static/images/table.png" alt="MY ALT TEXT" />
+        </div>
+        <h2 class="subtitle has-text-centered">
+          Quantitative comparison with MagicDrive. DTC, CTC and IQ represent DINO Temporal Consistency, CLIP Temporal
+          Consistency
+          and Imaging Quality, respectively. The best performances are presented in <b>bold</b>.
+        </h2>
+        <img src="static/images/vis_cmp.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of multi-view videos generated by our model and MagicDrive.
+        </h2>
+        <img src="static/images/scene_edit.jpg" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          The use-case of scene editing.
+        </h2>
+
+      </div>
+    </div>
+  </section>
+  <!--End paper poster -->
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Challenge Results</h2>
+        <div class="columns is-centered">
+          <img src="static/images/results.png" alt="MY ALT TEXT" />
+        </div>
+        <div class="columns is-centered">
+          <img src="static/images/progress.png" alt="MY ALT TEXT" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              DiVE: DiT-based Video Generation with Enhanced Control
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+<script>
+  bulmaCarousel.attach('#results-carousel', {
+    autoplay: false,  // 禁用自动播放
+    infinite: true    // 启用无限循环，如果需要
+  });
+</script>
+
+</html>
